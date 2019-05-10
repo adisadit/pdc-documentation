@@ -102,22 +102,22 @@ workflows:
       - build:
           filters:
             branches:
-              only: master
+              only: develop
       - clean:
           requires:
             - build
           filters:
             branches:
-              only: master
+              only: develop
       - pdf:
           requires:
             - clean
           filters:
             branches:
-              only: master
+              only: develop
       - deploy:
           requires:
             - pdf
           filters:
             branches:
-              only: master
+              only: develop
